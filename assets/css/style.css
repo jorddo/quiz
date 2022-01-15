@@ -1,0 +1,29 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+header a {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.page {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
