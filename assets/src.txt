@@ -1,1 +1,2 @@
 https://www.joshwcomeau.com/css/custom-css-reset/
+https://stackoverflow.com/questions/6893130/how-to-set-one-minute-counter-in-javascript
