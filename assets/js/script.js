@@ -32,9 +32,27 @@ function turnOn3() {
   question3.classList.toggle('hide');
 }
 
+function turnOff3() {
+  question3.classList.add('hide');
+}
+
 // render question 4
+function turnOn4() {
+  question4.classList.toggle('hide');
+}
+
+function turnOff4() {
+  question4.classList.add('hide');
+}
 
 // render question 5
+function turnOn5() {
+  question5.classList.toggle('hide');
+}
+
+function turnOff5() {
+  question5.classList.add('hide');
+}
 
 // done page/ initial entry
 
