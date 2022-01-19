@@ -33,7 +33,15 @@ header a {
 }
 
 .question-text {
+  margin-top: 8rem;
   font-size: 2rem;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 4rem;
 }
 
 .hide {
