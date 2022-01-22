@@ -11,45 +11,43 @@ $(document).ready(function () {
     $('.question1').addClass('hide');
     $('.question2').removeClass('hide');
   });
+
+  // turn off q2, turn on q3
+  $('.q2button').click(function () {
+    $('.question2').addClass('hide');
+    $('.question3').removeClass('hide');
+  });
+
+  // turn of q3, turn on q4
+  $('.q3button').click(function () {
+    $('.question3').addClass('hide');
+    $('.question4').removeClass('hide');
+  });
+
+  // turn off q4, turn on q5
+  $('.q4button').click(function () {
+    $('.question4').addClass('hide');
+    $('.question5').removeClass('hide');
+  });
+
+  // turn off q5, turn on done page
+  $('.q5button').click(function () {
+    $('.question5').addClass('hide');
+    $('.done').removeClass('hide');
+  });
+  // done page/ initial entry
+  $('.submit-button').click(function () {
+    $('.done').addClass('hide');
+    $('.leaderboard').removeClass('hide');
+    storeItem();
+  });
 });
 
-// render question 2
-function turnOn2() {
-  question2.classList.toggle('hide');
+// store score to local storage
+function storeItem() {
+  let initials = document.getElementById('initials');
+  localStorage.setItem('initials', initials.value);
 }
-
-function turnOff2() {
-  question2.classList.add('hide');
-}
-// render question 3
-function turnOn3() {
-  question3.classList.toggle('hide');
-}
-
-function turnOff3() {
-  question3.classList.add('hide');
-}
-
-// render question 4
-function turnOn4() {
-  question4.classList.toggle('hide');
-}
-
-function turnOff4() {
-  question4.classList.add('hide');
-}
-
-// render question 5
-function turnOn5() {
-  question5.classList.toggle('hide');
-}
-
-function turnOff5() {
-  question5.classList.add('hide');
-}
-
-// done page/ initial entry
-
 // high score/ leaderboard page
 
 // timer
