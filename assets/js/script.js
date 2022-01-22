@@ -1,23 +1,17 @@
-const startPage = document.querySelector('.start-page');
-const question1 = document.querySelector('.question1');
-const question2 = document.querySelector('.question2');
-const question3 = document.querySelector('.question3');
-const question4 = document.querySelector('.question4');
-const question5 = document.querySelector('.question5');
+$(document).ready(function () {
+  // turning off start page, turning on question 1
+  $('.start-button').click(function () {
+    $('.start-page').addClass('hide');
+    $('.question1').removeClass('hide');
+    minTimer();
+  });
 
-// turn off start page
-function turnOff() {
-  startPage.classList.add('hide');
-}
-
-// render question 1 and hide it after interaction
-function turnOn1() {
-  question1.classList.toggle('hide');
-}
-
-function turnOff1() {
-  question1.classList.add('hide');
-}
+  // turning off question 1, turning on q2
+  $('.q1button').click(function () {
+    $('.question1').addClass('hide');
+    $('.question2').removeClass('hide');
+  });
+});
 
 // render question 2
 function turnOn2() {

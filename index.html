@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>Quizzy Time</title>
   </head>
 
   <body>
@@ -33,18 +33,10 @@
         <div class="question1 page hide">
           <p class="question-text">Commonly used data types DO NOT include:</p>
           <div class="answers">
-            <button onclick="turnOn2(), turnOff1()" class="button">
-              1. strings
-            </button>
-            <button onclick="turnOn2(), turnOff1()" class="button">
-              2. booleans
-            </button>
-            <button onclick="turnOn2(), turnOff1()" class="button">
-              3. alerts
-            </button>
-            <button onclick="turnOn2(), turnOff1()" class="button">
-              4. numbers
-            </button>
+            <button class="button q1button">1. strings</button>
+            <button class="button q1button">2. booleans</button>
+            <button class="button q1button">3. alerts</button>
+            <button class="button q1button">4. numbers</button>
           </div>
         </div>
         <div class="question2 page hide">
@@ -52,18 +44,10 @@
             The condition in an if / else statement is enlcosed with ______.
           </p>
           <div class="answers">
-            <button onclick="turnOn3(), turnOff2()" class="button">
-              1. quotes
-            </button>
-            <button onclick="turnOn3(), turnOff2()" class="button">
-              2. curly brackets
-            </button>
-            <button onclick="turnOn3(), turnOff2()" class="button">
-              3. parenthesis
-            </button>
-            <button onclick="turnOn3(), turnOff2()" class="button">
-              4. square brackets
-            </button>
+            <button class="button q2button">1. quotes</button>
+            <button class="button q2button">2. curly brackets</button>
+            <button class="button q2button">3. parenthesis</button>
+            <button class="button q2button">4. square brackets</button>
           </div>
         </div>
         <div class="question3 page hide">
@@ -71,18 +55,10 @@
             Arrays in JavaScript can be used to store ______.
           </p>
           <div class="answers">
-            <button onclick="turnOn4(), turnOff3()" class="button">
-              1. numbers and strings
-            </button>
-            <button onclick="turnOn4(), turnOff3()" class="button">
-              2. other arrays
-            </button>
-            <button onclick="turnOn4(), turnOff3()" class="button">
-              3. booleans
-            </button>
-            <button onclick="turnOn4(), turnOff3()" class="button">
-              4. all of the above
-            </button>
+            <button class="button q3button">1. numbers and strings</button>
+            <button class="button q3button">2. other arrays</button>
+            <button class="button q3button">3. booleans</button>
+            <button class="button q3button">4. all of the above</button>
           </div>
         </div>
         <div class="question4 page hide">
@@ -91,18 +67,10 @@
             variables.
           </p>
           <div class="answers">
-            <button onclick="turnOn5(), turnOff4()" class="button">
-              1. commas
-            </button>
-            <button onclick="turnOn5(), turnOff4()" class="button">
-              2. curly brackets
-            </button>
-            <button onclick="turnOn5(), turnOff4()" class="button">
-              3. quotes
-            </button>
-            <button onclick="turnOn5(), turnOff4()" class="button">
-              4. parenthesis
-            </button>
+            <button class="button q4button">1. commas</button>
+            <button class="button q4button">2. curly brackets</button>
+            <button class="button q4button">3. quotes</button>
+            <button class="button q4button">4. parenthesis</button>
           </div>
         </div>
         <div class="question5 page hide">
@@ -111,18 +79,21 @@
             printing content to the debugger is ______.
           </p>
           <div class="answers">
-            <button onclick="turnOff5()" class="button">1. JavaScript</button>
-            <button onclick="turnOff5()" class="button">
-              2. terminal/bash
-            </button>
-            <button onclick="turnOff5()" class="button">3. for loops</button>
-            <button onclick="turnOff5()" class="button">4. console.log</button>
+            <button class="button q5button">1. JavaScript</button>
+            <button class="button q5button">2. terminal/bash</button>
+            <button class="button q5button">3. for loops</button>
+            <button class="button q5button">4. console.log</button>
           </div>
         </div>
         <div class="done page hide">Done</div>
         <div class="leaderboard page hide">High Scores</div>
       </div>
     </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
