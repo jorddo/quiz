@@ -84,6 +84,12 @@ $(document).ready(function () {
   $('.clear').click(function () {
     localStorage.removeItem('hi-scores');
   });
+
+  // go home when "go back" is clicked
+  $('.go-home').click(function () {
+    location.reload(true);
+    alert('Reloading quiz.');
+  });
 });
 
 // high score/ leaderboard page

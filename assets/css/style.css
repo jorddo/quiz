@@ -50,10 +50,13 @@ header a {
 
 .button {
   background-color: #4b0082;
+  border: none;
   color: white;
   border-radius: 6px;
   padding: 0.3rem 2rem;
   cursor: pointer;
+  text-align: left;
+  margin: 3px;
 }
 
 .button:hover {
