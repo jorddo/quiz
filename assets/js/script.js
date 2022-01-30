@@ -89,7 +89,7 @@ $(document).ready(function () {
     for (let i = 0; i < highScores.length; i++) {
       $(board).append(
         '<li>' +
-          '<span>' + //give the spans classes to style
+          '<span>' + //give the spans classes to style??? - can't figure out how to style!
           highScores[i].initials +
           '</span>' +
           highScores[i].score +
@@ -120,3 +120,22 @@ function minTimer() {
     setTimeout(minTimer, 1000);
   }
 }
+
+//CAN'T FIGURE OUT VIEW HIGH SCORES LINK
+// $('#high-score').click(function () {
+//   $('.start-page').addClass('hide');
+//   $('.leaderboard').removeClass('hide');
+//   storeItem();
+//   let highScores = JSON.parse(localStorage.getItem('hi-scores'));
+//   let board = $('.board');
+//   for (let i = 0; i < highScores.length; i++) {
+//     $(board).append(
+//       '<li>' +
+//         '<span>' + //give the spans classes to style ???
+//         highScores[i].initials +
+//         '</span>' +
+//         highScores[i].score +
+//         '</li>'
+//     );
+//   }
+// });
