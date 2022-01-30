@@ -12,22 +12,27 @@ $(document).ready(function () {
 
   // store score to local storage
   function storeItem() {
-    // [{ initials: 'JJ', score: 22 }, { initials: 'JS', score: 24 }]
     // grab current version of local storage
     const storage = JSON.parse(localStorage.getItem('hi-scores'));
     // modify local storage
     if (storage) {
+      let initials = $('#initials').val();
+      let scoreObject = { initials, score };
+      let maxLength = 10;
+      // adding new object into the end of the array
+      storage.push(scoreObject);
+      // sorting highest value first
+      storage.sort((a, b) => (a.score < b.score ? 1 : -1));
+      // if array exceeds max length pop off lowest score
+      if (storage.length === maxLength + 1) {
+        storage.pop();
+      }
+      localStorage.setItem('hi-scores', JSON.stringify(storage));
     } else {
       let initials = $('#initials').val();
       let scoreObject = [{ initials, score }];
       localStorage.setItem('hi-scores', JSON.stringify(scoreObject));
     }
-
-    // insert new score, sort by score
-    // store only top 5 high scores
-    // replace local storage
-    // let initials = document.getElementById('initials');
-    // localStorage.setItem('initials', initials.value);
   }
 
   // turning off start page, turning on question 1
@@ -79,6 +84,18 @@ $(document).ready(function () {
     $('.done').addClass('hide');
     $('.leaderboard').removeClass('hide');
     storeItem();
+    let highScores = JSON.parse(localStorage.getItem('hi-scores'));
+    let board = $('.board');
+    for (let i = 0; i < highScores.length; i++) {
+      $(board).append(
+        '<li>' +
+          '<span>' + //give the spans classes to style
+          highScores[i].initials +
+          '</span>' +
+          highScores[i].score +
+          '</li>'
+      );
+    }
   });
 
   $('.clear').click(function () {
@@ -91,10 +108,6 @@ $(document).ready(function () {
     alert('Reloading quiz.');
   });
 });
-
-// high score/ leaderboard page
-// reset high scores
-// localStorage.removeItem()
 
 // timer
 let time = 59;
